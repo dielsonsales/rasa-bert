@@ -1,0 +1,8 @@
+language: "pt"
+
+pipeline:
+- name: "nlp_spacy"
+- name: "tokenizer_spacy"
+- name: "rasa_nlu.featurizers.bert_featurizer.BertFeaturizer"
+  model_dir: "multi_cased_L-12_H-768_A-12/"
+- name: "intent_classifier_sklearn"
